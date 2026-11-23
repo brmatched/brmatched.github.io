@@ -5,7 +5,11 @@ const repoName = process.env.GITHUB_REPOSITORY
   ? process.env.GITHUB_REPOSITORY.split('/')[1]
   : '';
 
-const base = process.env.VITE_BASE_PATH || (repoName ? `/${repoName}/` : '/');
+// User/Organization Pages repos named "<owner>.github.io" are served from root "/"
+const isRootPagesRepo = /\.github\.io$/i.test(repoName);
+const base =
+  process.env.VITE_BASE_PATH ||
+  (repoName && !isRootPagesRepo ? `/${repoName}/` : '/');
 
 export default defineConfig({
   base,

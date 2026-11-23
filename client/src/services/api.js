@@ -10,11 +10,15 @@ function detectGitHubRepo() {
   if (typeof window !== 'undefined' && window.location.hostname.endsWith('.github.io')) {
     const owner = window.location.hostname.replace(/\.github\.io$/i, '');
     const firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
+    // For root sites like https://brmatched.github.io/, repo is <owner>/<owner>.github.io
+    if (owner && (!firstSegment || ['downloads', 'login', 'cadastro', 'dashboard'].includes(firstSegment))) {
+      return `${owner}/${owner}.github.io`;
+    }
     if (owner && firstSegment) {
       return `${owner}/${firstSegment}`;
     }
   }
-  return 'leokamikaze02/brmatched';
+  return 'brmatched/brmatched.github.io';
 }
 
 export const GITHUB_REPO = detectGitHubRepo();
