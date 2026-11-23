@@ -1,0 +1,12 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+client/dist/
+server/brmatched.db
+server/brmatched.db-shm
+server/brmatched.db-wal
+server/.jwt-secret
+server/uploads/
+.DS_Store
+Thumbs.db
+*.log

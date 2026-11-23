@@ -1,0 +1,15 @@
+{
+  "name": "brmatched-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site oficial, hub de downloads e área de membros do jogo BRMatched",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n API,WEB -c yellow,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
