@@ -18,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (location.pathname !== '/') return undefined;
-    const sectionIds = ['lutadores', 'arenas', 'regras', 'devlog', 'apoiar'];
+    const sectionIds = ['lutadores', 'arenas', 'regras', 'noticias', 'apoiar'];
 
     function onScroll() {
       const scrollY = window.scrollY;
@@ -126,11 +126,11 @@ export default function Navbar() {
             Download PC
           </NavLink>
           <a
-            href="#devlog"
-            className={`nav-link ${location.pathname === '/' && activeHash === '#devlog' ? 'active' : ''}`}
-            onClick={(e) => handleSectionClick(e, 'devlog')}
+            href="#noticias"
+            className={`nav-link ${location.pathname === '/' && activeHash === '#noticias' ? 'active' : ''}`}
+            onClick={(e) => handleSectionClick(e, 'noticias')}
           >
-            Devlog
+            Notícias
           </a>
           <a
             href="#apoiar"
@@ -210,8 +210,8 @@ export default function Navbar() {
             <Link to="/downloads" className="nav-link" onClick={() => setMenuOpen(false)}>
               Download Windows PC
             </Link>
-            <a href="#devlog" className="nav-link" onClick={(e) => handleSectionClick(e, 'devlog')}>
-              Devlog
+            <a href="#noticias" className="nav-link" onClick={(e) => handleSectionClick(e, 'noticias')}>
+              Notícias &amp; Updates
             </a>
             <a href="#apoiar" className="nav-link" onClick={(e) => handleSectionClick(e, 'apoiar')}>
               Apoiar (PIX)

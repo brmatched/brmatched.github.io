@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import ArenasSection from '../components/ArenasSection';
 import DonateSection from '../components/DonateSection';
+import NewsSection from '../components/NewsSection';
 import TiltCard from '../components/TiltCard';
 import { useAuth } from '../context/AuthContext';
 import { FIGHTERS } from '../data/fighters';
@@ -926,83 +927,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- DEVLOG COMIC ISSUES ---------- */}
-      <section id="devlog" className="section" style={{ paddingTop: '1rem' }}>
-        <div className="container">
-          <div className="section-header" data-reveal="">
-            <div>
-              <span className="eyebrow">Diário do Desenvolvedor</span>
-              <h2 className="comic-title section-heading">ÚLTIMAS EDIÇÕES DO DEVLOG</h2>
-            </div>
-            {!IS_STATIC_SITE ? (
-              <Link to="/dashboard?tab=community" className="comic-btn comic-btn-sm comic-btn-white">
-                Mural de Bugs &amp; Ideias <ArrowRight size={15} />
-              </Link>
-            ) : issuesUrl ? (
-              <a
-                href={issuesUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="comic-btn comic-btn-sm comic-btn-white"
-              >
-                Reportar Bug ou Ideia <ArrowRight size={15} />
-              </a>
-            ) : null}
-          </div>
-
-          <div
-            className="grid-3-col"
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.4rem' }}
-            data-reveal="delay-1"
-          >
-            {posts.map((post) => (
-              <article
-                key={post.id}
-                className="comic-panel comic-panel-hover"
-                style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.9rem' }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span className="comic-tag" style={{ background: '#24d1ff', color: '#041320' }}>
-                    {post.tag}
-                  </span>
-                  <span className="mono" style={{ fontWeight: 700, fontSize: '0.76rem', color: 'var(--text-muted)' }}>
-                    EDIÇÃO #{String(post.issue_number).padStart(2, '0')}
-                  </span>
-                </div>
-
-                <h3 className="comic-title" style={{ fontSize: '1.7rem', margin: 0, lineHeight: 1.05 }}>
-                  {post.title}
-                </h3>
-
-                <p style={{ margin: 0, lineHeight: 1.6, color: 'var(--text-soft)', flex: 1, fontSize: '0.94rem' }}>
-                  {post.summary}
-                </p>
-
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    paddingTop: '0.9rem',
-                    borderTop: '1px solid var(--border-subtle)',
-                  }}
-                >
-                  <span className="mono" style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                    {formatDateBR(post.created_at)}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setActivePost(post)}
-                    className="comic-btn comic-btn-sm comic-btn-yellow"
-                  >
-                    Ler Edição
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ---------- NEWS & UPCOMING UPDATES ROADMAP ---------- */}
+      <NewsSection posts={posts} onOpenPost={setActivePost} />
 
       {/* ---------- DONATE / APOIE VIA PIX ---------- */}
       <DonateSection />

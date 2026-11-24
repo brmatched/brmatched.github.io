@@ -69,6 +69,9 @@ export default function Footer() {
               <Link to="/downloads" className="footer-link">
                 <ChevronRight size={15} /> Downloads para Windows
               </Link>
+              <a href="#noticias" onClick={(e) => goToSection(e, 'noticias')} className="footer-link">
+                <ChevronRight size={15} /> Notícias &amp; Futuros Updates
+              </a>
               <a href="#apoiar" onClick={(e) => goToSection(e, 'apoiar')} className="footer-link">
                 <ChevronRight size={15} /> Apoiar o Jogo (PIX)
               </a>

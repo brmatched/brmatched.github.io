@@ -1,5 +1,17 @@
 export const STATIC_POSTS = [
   {
+    id: 4,
+    issue_number: 4,
+    title: 'O QUE VEM POR AÍ: EXPANSÃO NÉVOA & SOMBRAS E ARENAS DE LONDRES!',
+    tag: 'FUTURO UPDATE',
+    summary:
+      'Confira os bastidores dos próximos updates gratuitos: Drácula, Sherlock Holmes, Homem Invisível, Jekyll & Hyde e os mapas Soho e Mansão Baskerville!',
+    content:
+      'O trabalho no próximo grande pacote de atualizações do BRMatched já começou!\n\nNa expansão Névoa & Sombras, 4 novos heróis lendários entram na arena com baralhos completos de 30 cartas em português e artes originais em estilo graphic novel: Drácula, Sherlock Holmes, Homem Invisível e Jekyll & Hyde.\n\nAlém dos novos lutadores, estamos finalizando duas arenas inéditas ambientadas em Londres: Soho (com ruas noturnas iluminadas a gás) e a Mansão Baskerville — que vai estrear o sistema de passagens secretas conectando salas distantes do tabuleiro!\n\nE logo depois já estão na fila Beowulf e Chapeuzinho Vermelho. Continue acompanhando esta seção de Notícias para ver prévias de cartas e datas de lançamento!',
+    author: 'DevBRMatched',
+    created_at: '2026-11-24 08:00:00',
+  },
+  {
     id: 3,
     issue_number: 3,
     title: 'BETA 2.0 NO AR: PÉ-GRANDE E ROBIN HOOD ENTRAM NA ARENA!',

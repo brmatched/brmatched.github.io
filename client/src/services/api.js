@@ -49,6 +49,57 @@ export function setToken(token) {
 
 let cachedGithubReleases = null;
 let cachedGithubFetchedAt = 0;
+let cachedGithubNews = null;
+let cachedGithubNewsAt = 0;
+
+async function fetchGitHubNewsPosts() {
+  const now = Date.now();
+  if (cachedGithubNews && now - cachedGithubNewsAt < 60_000) {
+    return cachedGithubNews;
+  }
+
+  if (!GITHUB_REPO) {
+    return STATIC_POSTS;
+  }
+
+  try {
+    const owner = GITHUB_REPO.split('/')[0].toLowerCase();
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/issues?labels=noticia&state=open&per_page=15`,
+      { headers: { Accept: 'application/vnd.github+json' } }
+    );
+    if (!res.ok) throw new Error(`GitHub Issues API ${res.status}`);
+    const list = await res.json();
+
+    // Only accept official posts authored by the repository owner
+    const official = (Array.isArray(list) ? list : []).filter(
+      (issue) => !issue.pull_request && String(issue.user?.login || '').toLowerCase() === owner
+    );
+
+    const dynamicPosts = official.map((issue, idx) => {
+      const cleanBody = String(issue.body || '').trim();
+      const firstLine = cleanBody.split(/\r?\n/).find((l) => l.trim()) || issue.title;
+      const summary = firstLine.length > 160 ? `${firstLine.slice(0, 157)}...` : firstLine;
+      return {
+        id: `gh-${issue.id}`,
+        issue_number: STATIC_POSTS.length + official.length - idx,
+        title: String(issue.title || '').toUpperCase(),
+        tag: 'FUTURO UPDATE',
+        summary,
+        content: cleanBody || issue.title,
+        author: 'DevBRMatched',
+        created_at: issue.created_at || '',
+      };
+    });
+
+    const merged = [...dynamicPosts, ...STATIC_POSTS];
+    cachedGithubNews = merged;
+    cachedGithubNewsAt = now;
+    return merged;
+  } catch {
+    return STATIC_POSTS;
+  }
+}
 
 function pickPrimaryAsset(assets = []) {
   if (!assets.length) return null;
@@ -189,10 +240,11 @@ export const api = {
     return `/api/releases/${id}/download`;
   },
 
-  // Devlog posts
+  // Devlog / News posts
   getPosts: async () => {
     if (IS_STATIC_SITE) {
-      return { posts: STATIC_POSTS };
+      const posts = await fetchGitHubNewsPosts();
+      return { posts };
     }
     return request('/posts');
   },
