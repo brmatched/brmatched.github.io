@@ -4,6 +4,30 @@ import { assetUrl } from '../utils/assets';
 
 const ARENAS = [
   {
+    id: 'soho',
+    name: 'SOHO',
+    collection: 'Beta 3.0 • Becos e Brumas',
+    image: assetUrl('/images/arenas/soho.jpg'),
+    color: '#f5c542',
+    zones: '6 Zonas',
+    players: '2 a 4 Jogadores',
+    style: 'Ruas Noturnas & Emboscadas',
+    description:
+      'Vielas londrinas iluminadas a gás e encobertas por bruma. Suas conexões centrais criam rotas rápidas de flanqueamento e combates intensos pelas esquinas de Londres.',
+  },
+  {
+    id: 'mansao_baskerville',
+    name: 'MANSÃO BASKERVILLE',
+    collection: 'Beta 3.0 • Becos e Brumas',
+    image: assetUrl('/images/arenas/mansao-baskerville.jpg'),
+    color: '#a855f7',
+    zones: '6 Zonas + 4 Passagens Secretas',
+    players: '2 a 4 Jogadores',
+    style: 'Passagens Secretas & Mansão Gótica',
+    description:
+      'Salões assombrados ligados por 4 Passagens Secretas que permitem atravessar a mansão em 1 passo! Domine os atalhos escondidos para cercar o adversário ou escapar em segurança.',
+  },
+  {
     id: 'sherwood',
     name: 'FLORESTA DE SHERWOOD',
     collection: 'Beta 2.0 • Robin Hood vs Pé-Grande',
@@ -63,7 +87,7 @@ export default function ArenasSection() {
         <div className="section-header" data-reveal="">
           <div>
             <span className="eyebrow" style={{ color: '#24d1ff' }}>
-              <Compass size={13} /> Tabuleiros Oficiais • Beta 2.0
+              <Compass size={13} /> Tabuleiros Oficiais • Beta 3.0
             </span>
             <h2 className="comic-title section-heading">ARENAS DE BATALHA ILUSTRADAS</h2>
           </div>
@@ -208,7 +232,7 @@ export default function ArenasSection() {
               </div>
 
               {/* Mini thumbnail selector */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem' }}>
                 {ARENAS.map((a) => {
                   const sel = a.id === activeArena.id;
                   return (
@@ -248,7 +272,7 @@ export default function ArenasSection() {
                 }}
               >
                 <Shield size={15} color="#10d876" style={{ flexShrink: 0 }} />
-                Todas as 4 arenas já vêm desbloqueadas gratuitamente no Beta 2.0!
+                Todas as 6 arenas (incluindo Soho e Mansão Baskerville) já vêm desbloqueadas gratuitamente no Beta 3.0!
               </div>
             </div>
           </div>

@@ -99,6 +99,13 @@ export default function Navbar() {
             Início
           </Link>
           <a
+            href="#noticias"
+            className={`nav-link ${location.pathname === '/' && activeHash === '#noticias' ? 'active' : ''}`}
+            onClick={(e) => handleSectionClick(e, 'noticias')}
+          >
+            Notícias
+          </a>
+          <a
             href="#lutadores"
             className={`nav-link ${location.pathname === '/' && activeHash === '#lutadores' ? 'active' : ''}`}
             onClick={(e) => handleSectionClick(e, 'lutadores')}
@@ -125,13 +132,6 @@ export default function Navbar() {
           >
             Download PC
           </NavLink>
-          <a
-            href="#noticias"
-            className={`nav-link ${location.pathname === '/' && activeHash === '#noticias' ? 'active' : ''}`}
-            onClick={(e) => handleSectionClick(e, 'noticias')}
-          >
-            Notícias
-          </a>
           <a
             href="#apoiar"
             className={`nav-link ${location.pathname === '/' && activeHash === '#apoiar' ? 'active' : ''}`}
@@ -198,6 +198,9 @@ export default function Navbar() {
             <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
               Início
             </Link>
+            <a href="#noticias" className="nav-link" onClick={(e) => handleSectionClick(e, 'noticias')}>
+              Notícias &amp; Updates
+            </a>
             <a href="#lutadores" className="nav-link" onClick={(e) => handleSectionClick(e, 'lutadores')}>
               Lutadores &amp; Cartas
             </a>
@@ -210,9 +213,6 @@ export default function Navbar() {
             <Link to="/downloads" className="nav-link" onClick={() => setMenuOpen(false)}>
               Download Windows PC
             </Link>
-            <a href="#noticias" className="nav-link" onClick={(e) => handleSectionClick(e, 'noticias')}>
-              Notícias &amp; Updates
-            </a>
             <a href="#apoiar" className="nav-link" onClick={(e) => handleSectionClick(e, 'apoiar')}>
               Apoiar (PIX)
             </a>
@@ -260,7 +260,7 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                 >
                   <Download size={15} />
-                  Baixar Beta 2.0 (PC)
+                  Baixar Beta 3.0 (PC)
                 </Link>
               )}
             </div>

@@ -291,6 +291,22 @@ function seedInitialData(db) {
     `);
 
     insertPost.run(
+      5,
+      'EM BREVE: BRMATCHED BETA 4.0 JÁ ESTÁ EM PRODUÇÃO!',
+      'EM BREVE • 4.0',
+      'Em breve vamos ter o Beta 4.0! Prepare-se para Beowulf, Chapeuzinho Vermelho, novas arenas ilustradas e mecânicas inéditas de combate.',
+      'Temos uma grande novidade para a comunidade de duelistas: em breve vamos ter o BRMatched Beta 4.0!\n\nLogo após o lançamento do Beta 3.0 (Becos e Brumas), já iniciamos a produção da próxima grande atualização gratuita do jogo. O Beta 4.0 vai expandir ainda mais a arena com a chegada de Beowulf (acompanhado por Wiglaf e sua mecânica de Fúria) e Chapeuzinho Vermelho (ao lado do Caçador e os combos da Cesta de cartas).',
+      'DevBRMatched'
+    );
+    insertPost.run(
+      4,
+      'BETA 3.0 NO AR: BECOS E BRUMAS TRAZ 10 HERÓIS E 6 ARENAS!',
+      'BETA 3.0',
+      'Drácula, Sherlock Holmes, Homem Invisível e Jekyll & Hyde chegaram junto com Soho, Mansão Baskerville (com Passagens Secretas) e novos efeitos!',
+      'O BRMatched Beta 3.0 — Becos e Brumas chegou com 10 heróis jogáveis (300 cartas em PT-BR), 6 arenas ilustradas incluindo Soho e Mansão Baskerville com Passagens Secretas, seleção direta no mapa/mão e novos efeitos visuais e sonoros.',
+      'DevBRMatched'
+    );
+    insertPost.run(
       3,
       'BETA 2.0 NO AR: PÉ-GRANDE E ROBIN HOOD ENTRAM NA ARENA!',
       'BETA 2.0',

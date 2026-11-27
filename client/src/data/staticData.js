@@ -1,15 +1,27 @@
 export const STATIC_POSTS = [
   {
+    id: 5,
+    issue_number: 5,
+    title: 'EM BREVE: BRMATCHED BETA 4.0 JÁ ESTÁ EM PRODUÇÃO!',
+    tag: 'EM BREVE • 4.0',
+    summary:
+      'Em breve vamos ter o Beta 4.0! Prepare-se para Beowulf, Chapeuzinho Vermelho, a nova arena Heorot e mecânicas inéditas de combate.',
+    content:
+      'Temos uma grande novidade para a comunidade de duelistas: em breve vamos ter o BRMatched Beta 4.0!\n\nLogo após o lançamento do Beta 3.0 (Becos e Brumas), já iniciamos a produção da próxima grande atualização gratuita do jogo. O Beta 4.0 vai expandir ainda mais a arena com a chegada de Beowulf (acompanhado por Wiglaf e sua mecânica de pontos de Fúria) e Chapeuzinho Vermelho (ao lado do Caçador e os combos táticos da Cesta de cartas).\n\nAlém dos novos lutadores e seus baralhos completos em português, o Beta 4.0 também trará a nova arena ilustrada Heorot (com portas táticas!), trilha sonora dedicada, aprimoramentos na IA e efeitos visuais inéditos.\n\nConfira as prévias oficiais de Beowulf, Chapeuzinho Vermelho, cartas e do mapa Heorot logo acima e fique ligado para a data de lançamento!',
+    author: 'DevBRMatched',
+    created_at: '2026-11-27 11:45:00',
+  },
+  {
     id: 4,
     issue_number: 4,
-    title: 'O QUE VEM POR AÍ: EXPANSÃO NÉVOA & SOMBRAS E ARENAS DE LONDRES!',
-    tag: 'FUTURO UPDATE',
+    title: 'BETA 3.0 NO AR: BECOS E BRUMAS TRAZ 10 HERÓIS E 6 ARENAS!',
+    tag: 'BETA 3.0',
     summary:
-      'Confira os bastidores dos próximos updates gratuitos: Drácula, Sherlock Holmes, Homem Invisível, Jekyll & Hyde e os mapas Soho e Mansão Baskerville!',
+      'Drácula, Sherlock Holmes, Homem Invisível e Jekyll & Hyde chegaram junto com Soho, Mansão Baskerville (com Passagens Secretas) e novos efeitos!',
     content:
-      'O trabalho no próximo grande pacote de atualizações do BRMatched já começou!\n\nNa expansão Névoa & Sombras, 4 novos heróis lendários entram na arena com baralhos completos de 30 cartas em português e artes originais em estilo graphic novel: Drácula, Sherlock Holmes, Homem Invisível e Jekyll & Hyde.\n\nAlém dos novos lutadores, estamos finalizando duas arenas inéditas ambientadas em Londres: Soho (com ruas noturnas iluminadas a gás) e a Mansão Baskerville — que vai estrear o sistema de passagens secretas conectando salas distantes do tabuleiro!\n\nE logo depois já estão na fila Beowulf e Chapeuzinho Vermelho. Continue acompanhando esta seção de Notícias para ver prévias de cartas e datas de lançamento!',
+      'O BRMatched Beta 3.0 — Becos e Brumas chegou trazendo a maior atualização do jogo até agora!\n\nO elenco agora conta com 10 heróis lendários jogáveis (300 cartas oficiais em PT-BR), incluindo Drácula (com suas 3 Irmãs), Sherlock Holmes (com Dr. Watson), Homem Invisível (com 3 fichas de névoa controláveis diretamente no mapa) e Dr. Jekyll & Sr. Hyde (com transformação 3D entre formas).\n\nDuas novas arenas londrinas entraram em jogo: Soho e Mansão Baskerville — que estreia as Passagens Secretas conectando salas distantes do tabuleiro! O Beta 3.0 também inclui descarte direto clicando nas cartas da mão, trilha sonora e sons de ataque exclusivos para os novos personagens, e um pacote completo de novos efeitos visuais.',
     author: 'DevBRMatched',
-    created_at: '2026-11-24 08:00:00',
+    created_at: '2026-11-27 09:00:00',
   },
   {
     id: 3,
@@ -19,19 +31,19 @@ export const STATIC_POSTS = [
     summary:
       'O elenco chegou a 6 heróis jogáveis! Confira Medusa, Rei Arthur, Alice, Sinbad, Pé-Grande e Robin Hood em estilo HQ.',
     content:
-      'A atualização Beta 2.0 do BRMatched está oficialmente disponível para Windows PC! Além dos 4 clássicos da Batalha das Lendas Vol. 1 (Medusa, Rei Arthur, Alice e Sinbad), agora você pode duelar com o Pé-Grande (e seu Jackalope) e Robin Hood (com os 4 Foras-da-Lei), todos com baralhos completos de 30 cartas em português e artes inéditas em estilo Comics!',
+      'A atualização Beta 2.0 do BRMatched foi oficialmente disponibilizada para Windows PC! Além dos 4 clássicos da Batalha das Lendas Vol. 1 (Medusa, Rei Arthur, Alice e Sinbad), entraram em cena o Pé-Grande (e seu Jackalope) e Robin Hood (com os 4 Foras-da-Lei), todos com baralhos completos de 30 cartas em português e artes inéditas em estilo Comics!',
     author: 'DevBRMatched',
     created_at: '2026-11-22 12:00:00',
   },
   {
     id: 2,
     issue_number: 2,
-    title: 'ARTES INÉDITAS EM QUADRINHOS PARA TODOS OS 6 BARALHOS!',
+    title: 'ARTES INÉDITAS EM QUADRINHOS PARA TODOS OS BARALHOS!',
     tag: 'ARTE',
     summary:
       'Cada carta de Ataque, Defesa, Versátil e Estratagema ganhou identidade própria em estilo Comics vibrante.',
     content:
-      'O BRMatched traz duelos táticos assimétricos intensos com identidade visual 100% original em quadrinhos e cartas totalmente em português brasileiro. Todas as 180 cartas do Beta 2.0 receberam molduras de alto contraste e efeitos visuais de impacto!',
+      'O BRMatched traz duelos táticos assimétricos intensos com identidade visual 100% original em quadrinhos e cartas totalmente em português brasileiro. Todas as cartas receberam molduras de alto contraste e efeitos visuais de impacto!',
     author: 'DevBRMatched',
     created_at: '2026-11-18 15:00:00',
   },
@@ -51,6 +63,26 @@ export const STATIC_POSTS = [
 
 export const FALLBACK_RELEASES = [
   {
+    id: 'beta-3.0',
+    version: 'v3.0-beta',
+    title: 'Beta 3.0 — Becos e Brumas (10 Heróis & 6 Arenas)',
+    channel: 'beta',
+    platform: 'Windows 10/11 (x64)',
+    file_name: 'BRMATCHED-Beta-3.0-Setup-Windows-x64.exe',
+    file_size: 540000000,
+    sha256: '',
+    changelog: [
+      'NOVO: 4 novos heróis jogáveis — Sherlock Holmes (Dr. Watson), Drácula (3 Irmãs), Homem Invisível (3 Névoas) e Dr. Jekyll & Sr. Hyde!',
+      'NOVO: Arenas Soho e Mansão Baskerville (com 4 Passagens Secretas!) + trilhas sonoras e atmosferas dedicadas.',
+      'NOVO: 120 novas cartas ilustradas em PT-BR (total de 300 cartas nos 10 heróis) com efeitos visuais exclusivos.',
+      'MELHORIA: Posicionamento e movimentação direta no mapa (incluindo arrastar névoas/lutadores) e descarte direto clicando nas cartas da mão com confirmação Sim/Não.',
+    ].join('\n'),
+    download_count: 0,
+    is_latest: 1,
+    external_url: '',
+    created_at: '2026-11-27 09:00:00',
+  },
+  {
     id: 'beta-2.0',
     version: 'v2.0-beta',
     title: 'Beta 2.0 — 6 Heróis Lendários (PT-BR Comics)',
@@ -66,7 +98,7 @@ export const FALLBACK_RELEASES = [
       'MELHORIA: Motor de combate fiel à ordem Imediatamente → Durante o Combate → Após o Combate, incluindo cancelamento por Finta.',
     ].join('\n'),
     download_count: 0,
-    is_latest: 1,
+    is_latest: 0,
     external_url: '',
     created_at: '2026-11-22 12:00:00',
   },

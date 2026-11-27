@@ -15,7 +15,7 @@ const SUPPORT_TIERS = [
     value: 25,
     amount: 'R$ 25',
     label: 'Apoio Lendário',
-    note: 'Impulsiona a chegada dos próximos heróis (Drácula, Sherlock, Beowulf e mais!).',
+    note: 'Impulsiona o Beta 4.0 e a chegada dos próximos heróis (Beowulf, Chapeuzinho Vermelho e mais!).',
   },
   {
     value: 50,

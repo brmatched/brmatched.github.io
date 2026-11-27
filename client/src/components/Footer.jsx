@@ -92,7 +92,7 @@ export default function Footer() {
               Entre na Arena
             </h4>
             <p style={{ color: 'var(--text-soft)', fontSize: '0.93rem', lineHeight: 1.6, margin: '0 0 1.2rem' }}>
-              Baixe a versão Beta 2.0 do BRMatched para Windows 10/11 e duele com todos os 6 heróis lendários!
+              Baixe a versão Beta 3.0 do BRMatched para Windows 10/11 e duele com todos os 10 heróis lendários!
             </p>
             <Link to="/downloads" className="comic-btn comic-btn-sm comic-btn-emerald">
               <Download size={16} />
@@ -118,7 +118,7 @@ export default function Footer() {
             BRMatched © {new Date().getFullYear()} — Sistema DBT (Deck-Building com Tabuleiro)
           </span>
           <span className="mono" style={{ fontSize: '0.76rem', letterSpacing: '0.06em' }}>
-            WINDOWS PC (x64) • BETA 2.0 • COMIC EDITION
+            WINDOWS PC (x64) • BETA 3.0 • EM BREVE 4.0
           </span>
         </div>
       </div>

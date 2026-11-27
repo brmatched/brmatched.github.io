@@ -233,8 +233,9 @@ export default function Home() {
               <p className="hero-lead">
                 <strong>BRMatched</strong> é um jogo brasileiro de{' '}
                 <strong>Deck-Building com Tabuleiro (Sistema DBT)</strong> com artes oficiais em
-                estilo <em>graphic novel</em> e baralhos assimétricos 100% em português. Comande 6
-                heróis lendários no <strong>Beta 2.0</strong> e baixe grátis para Windows PC.
+                estilo <em>graphic novel</em> e baralhos assimétricos 100% em português. Comande 10
+                heróis lendários no <strong>Beta 3.0</strong> (e prepare-se: <strong>Beta 4.0 em breve</strong>!)
+                — baixe grátis para Windows PC.
               </p>
 
               <div className="hero-cta-row">
@@ -267,11 +268,11 @@ export default function Home() {
                   <div className="hero-stat-label">Downloads PC</div>
                 </div>
                 <div className="hero-stat-card" style={{ '--stat-color': '#24d1ff' }}>
-                  <div className="hero-stat-value">6 HERÓIS</div>
-                  <div className="hero-stat-label">No Beta 2.0</div>
+                  <div className="hero-stat-value">10 HERÓIS</div>
+                  <div className="hero-stat-label">No Beta 3.0</div>
                 </div>
                 <div className="hero-stat-card" style={{ '--stat-color': '#10d876' }}>
-                  <div className="hero-stat-value">180+</div>
+                  <div className="hero-stat-value">300</div>
                   <div className="hero-stat-label">Cartas PT-BR</div>
                 </div>
               </div>
@@ -382,9 +383,9 @@ export default function Home() {
         <div className="marquee-track">
           <span>EM BATALHA, NÃO HÁ IGUAIS</span>
           <span className="marquee-sep" />
-          <span style={{ color: '#f5c542' }}>SISTEMA DBT — DECK-BUILDING COM TABULEIRO</span>
+          <span style={{ color: '#f5c542' }}>SISTEMA DBT — BETA 3.0 NO AR • EM BREVE BETA 4.0</span>
           <span className="marquee-sep" />
-          <span>MEDUSA × REI ARTHUR × ALICE × SINBAD × PÉ-GRANDE × ROBIN HOOD</span>
+          <span>MEDUSA × REI ARTHUR × ALICE × SINBAD × PÉ-GRANDE × ROBIN HOOD × SHERLOCK × DRÁCULA × HOMEM INVISÍVEL × JEKYLL &amp; HYDE</span>
           <span className="marquee-sep" />
           <span style={{ color: '#10d876' }}>BARALHOS ASSIMÉTRICOS DE 30 CARTAS</span>
           <span className="marquee-sep" />
@@ -392,11 +393,14 @@ export default function Home() {
           <span className="marquee-sep" />
           <span>EM BATALHA, NÃO HÁ IGUAIS</span>
           <span className="marquee-sep" />
-          <span style={{ color: '#f5c542' }}>SISTEMA DBT — DECK-BUILDING COM TABULEIRO</span>
+          <span style={{ color: '#f5c542' }}>SISTEMA DBT — BETA 3.0 NO AR • EM BREVE BETA 4.0</span>
           <span className="marquee-sep" />
-          <span>MEDUSA × REI ARTHUR × ALICE × SINBAD × PÉ-GRANDE × ROBIN HOOD</span>
+          <span>MEDUSA × REI ARTHUR × ALICE × SINBAD × PÉ-GRANDE × ROBIN HOOD × SHERLOCK × DRÁCULA × HOMEM INVISÍVEL × JEKYLL &amp; HYDE</span>
         </div>
       </div>
+
+      {/* ---------- NEWS & UPCOMING UPDATES ROADMAP (LOGO APÓS O INÍCIO) ---------- */}
+      <NewsSection posts={posts} onOpenPost={setActivePost} />
 
       {/* ---------- FIGHTER ROSTER & DYNAMIC DOSSIER ---------- */}
       <section id="lutadores" className="section">
@@ -404,7 +408,7 @@ export default function Home() {
           <div className="section-header" data-reveal="">
             <div>
               <span className="eyebrow" style={{ color: '#e63946' }}>
-                Elenco Completo • Beta 2.0 (6 Heróis Jogáveis)
+                Elenco Completo • Beta 3.0 (10 Heróis Jogáveis)
               </span>
               <h2 className="comic-title section-heading">ESCOLHA SEU LUTADOR LENDÁRIO</h2>
             </div>
@@ -674,11 +678,11 @@ export default function Home() {
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', flexWrap: 'wrap' }}>
               <span className="comic-tag" style={{ background: '#f5c542', color: '#08101a' }}>
-                PRÓXIMA EXPANSÃO
+                EM BREVE • BETA 4.0
               </span>
               <span style={{ color: 'var(--text-soft)', fontSize: '0.95rem' }}>
-                <strong style={{ color: 'var(--text-main)' }}>Em desenvolvimento pós-Beta 2.0:</strong>{' '}
-                Drácula, Sherlock Holmes, Homem Invisível, Jekyll &amp; Hyde, Beowulf e Chapeuzinho Vermelho.
+                <strong style={{ color: 'var(--text-main)' }}>Em breve teremos o Beta 4.0:</strong>{' '}
+                Beowulf (com Wiglaf), Chapeuzinho Vermelho (com Caçador), novas arenas e mecânicas inéditas já estão em produção!
               </span>
             </div>
           </div>
@@ -816,8 +820,8 @@ export default function Home() {
                 PRONTO PARA TESTAR ESSAS ESTRATÉGIAS NA ARENA?
               </div>
               <p style={{ margin: 0, color: 'var(--text-soft)', fontSize: '0.94rem' }}>
-                Baixe o <strong style={{ color: '#f5c542' }}>BRMatched Beta 2.0</strong> grátis para
-                Windows PC e jogue partidas completas com os 6 heróis, mapas oficiais e trilha sonora!
+                Baixe o <strong style={{ color: '#f5c542' }}>BRMatched Beta 3.0</strong> grátis para
+                Windows PC e jogue partidas completas com os 10 heróis, 6 mapas oficiais e trilha sonora!
               </p>
             </div>
             {latest ? (
@@ -860,7 +864,7 @@ export default function Home() {
                 </h2>
                 <p style={{ fontSize: '1.03rem', lineHeight: 1.65, color: 'var(--text-soft)', margin: '0 0 1.6rem' }}>
                   {latest
-                    ? `Versão atual: ${latest.version} — "${latest.title}". Todos os 6 heróis jogáveis (Medusa, Rei Arthur, Alice, Sinbad, Pé-Grande e Robin Hood) com cartas oficiais em PT-BR prontos para Windows 10 e 11.`
+                    ? `Versão atual: ${latest.version} — "${latest.title}". Todos os 10 heróis jogáveis (incluindo Sherlock Holmes, Drácula, Homem Invisível e Jekyll & Hyde) e 6 arenas em PT-BR prontos para Windows 10 e 11.`
                     : 'Baixe a build mais recente do BRMatched para Windows PC com atualizações diretas pelo portal.'}
                 </p>
 
@@ -927,9 +931,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- NEWS & UPCOMING UPDATES ROADMAP ---------- */}
-      <NewsSection posts={posts} onOpenPost={setActivePost} />
-
       {/* ---------- DONATE / APOIE VIA PIX ---------- */}
       <DonateSection />
 
@@ -960,14 +961,14 @@ export default function Home() {
               }}
             >
               Crie sua conta gratuita para baixar builds antecipadas, personalizar seu Cartão de
-              Duelista, acompanhar os bastidores do Beta 2.0 e enviar ideias direto ao criador.
+              Duelista, acompanhar os bastidores do Beta 3.0 e da chegada do Beta 4.0 e enviar ideias direto ao criador.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '0.95rem', flexWrap: 'wrap' }}>
               {IS_STATIC_SITE ? (
                 <>
                   <Link to="/downloads" className="comic-btn comic-btn-lg comic-btn-emerald">
                     <Download size={21} />
-                    BAIXAR BETA 2.0 GRÁTIS
+                    BAIXAR BETA 3.0 GRÁTIS
                   </Link>
                   {issuesUrl && (
                     <a
