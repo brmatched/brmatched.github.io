@@ -306,7 +306,11 @@ export default function Home() {
                         }}
                         title={`Explorar ${f.name}`}
                       >
-                        <img src={f.image} alt={`Arte oficial de ${f.name} no BRMatched`} />
+                        <img
+                          src={f.image}
+                          alt={`Arte oficial de ${f.name} no BRMatched`}
+                          style={f.cardPosition ? { objectPosition: f.cardPosition } : undefined}
+                        />
                         <div className="hero-slash-overlay">
                           <span className="hero-slash-vertical-name">{f.name}</span>
                           <div className="hero-slash-details">
@@ -432,7 +436,11 @@ export default function Home() {
                   style={{ '--f-color': fighter.color, '--f-glow': fighter.accentGlow }}
                 >
                   <div className="fighter-select-art">
-                    <img src={fighter.image} alt={`Retrato oficial de ${fighter.name}`} />
+                    <img
+                      src={fighter.image}
+                      alt={`Retrato oficial de ${fighter.name}`}
+                      style={fighter.cardPosition ? { objectPosition: fighter.cardPosition } : undefined}
+                    />
                     <span className="fighter-select-hp" title="Vida Inicial">
                       {fighter.hp}
                     </span>
@@ -490,7 +498,15 @@ export default function Home() {
               {/* Left Column: Portrait + Special Ability + Sidekick + Quote */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
                 <div className="dossier-portrait-card">
-                  <img src={selectedFighter.image} alt={`Ilustração oficial de ${selectedFighter.name}`} />
+                  <img
+                    src={selectedFighter.image}
+                    alt={`Ilustração oficial de ${selectedFighter.name}`}
+                    style={
+                      selectedFighter.dossierPosition
+                        ? { objectPosition: selectedFighter.dossierPosition }
+                        : undefined
+                    }
+                  />
                 </div>
 
                 <div

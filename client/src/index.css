@@ -1254,14 +1254,14 @@ div[id] {
   overflow: hidden;
   border: 2px solid var(--fighter-color, var(--gold));
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.85), 0 0 36px -12px var(--fighter-glow, rgba(245, 197, 66, 0.4));
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
 }
 
 .dossier-portrait-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 18%;
   display: block;
 }
 
